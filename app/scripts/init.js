@@ -15,6 +15,9 @@ require.config({
     },
 
     paths: {
+      // React components
+      '#components': 'components/build',
+
         jquery: '../bower_components/jquery/dist/jquery',
         underscore: '../bower_components/lodash/dist/lodash',
         backbone: '../bower_components/backbone/backbone',
