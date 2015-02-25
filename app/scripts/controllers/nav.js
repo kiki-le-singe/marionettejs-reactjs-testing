@@ -1,12 +1,21 @@
 define([
   'marionette',
+  'react',
   'views/helloWorldItemView',
   'views/librariesCompositeView',
   'models/helloWorldModel',
-  'models/librariesCollection'
+  'models/librariesCollection',
+  '#components/hello-world'
 ],
 
-function (Marionette, HelloWorldItemView, LibrariesCompositeView, HelloWorldModel, LibrariesCollection) {
+function (
+  Marionette,
+  React,
+  HelloWorldItemView,
+  LibrariesCompositeView,
+  HelloWorldModel,
+  LibrariesCollection,
+  HelloWorldComponent) {
   'use strict';
 
   var NavController = Marionette.Controller.extend({
@@ -15,9 +24,14 @@ function (Marionette, HelloWorldItemView, LibrariesCompositeView, HelloWorldMode
     },
 
     home: function () {
-      return this.contentRegion.show(new HelloWorldItemView({
-        model: new HelloWorldModel()
-      }));
+      // return this.contentRegion.show(new HelloWorldItemView({
+      //   model: new HelloWorldModel()
+      // }));
+      var helloWorldComponent = React.createFactory(HelloWorldComponent);
+      React.render(
+        helloWorldComponent(),
+        document.getElementById('content')
+      );
     },
 
     libraries: function () {
