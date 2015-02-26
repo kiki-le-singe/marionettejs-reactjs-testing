@@ -1,6 +1,10 @@
 'use strict';
 
 module.exports = {
+  react: {
+    files: ['<%= yeoman.app %>/scripts/components/src/**/*.jsx'],
+    tasks: ['react:dev']
+  },
   compass: {
     files: ['<%= yeoman.app %>/styles/**/*.scss'],
     tasks: ['compass:dev']
