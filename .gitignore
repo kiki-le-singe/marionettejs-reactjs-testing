@@ -3,6 +3,7 @@ temp
 dist
 .sass-cache
 app/bower_components
+app/scripts/components/build
 .tmp
 app/styles/css
 marionette-boilerplate-*.tgz
