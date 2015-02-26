@@ -28,7 +28,7 @@ function (
       //   model: new HelloWorldModel()
       // }));
 
-      helloWorldComponent;
+      helloWorldComponent();
     },
 
     libraries: function () {
