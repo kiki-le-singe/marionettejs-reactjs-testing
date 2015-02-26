@@ -15,8 +15,6 @@ function (React) {
     }
   });
 
-  return React.render(
-    <HelloWorld />,
-    document.getElementById('content')
-  );
+  return function (options) {
+  }
 });
