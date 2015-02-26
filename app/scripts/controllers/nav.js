@@ -15,7 +15,7 @@ function (
   LibrariesCompositeView,
   HelloWorldModel,
   LibrariesCollection,
-  HelloWorldComponent) {
+  helloWorldComponent) {
   'use strict';
 
   var NavController = Marionette.Controller.extend({
@@ -27,11 +27,8 @@ function (
       // return this.contentRegion.show(new HelloWorldItemView({
       //   model: new HelloWorldModel()
       // }));
-      var helloWorldComponent = React.createFactory(HelloWorldComponent);
-      React.render(
-        helloWorldComponent(),
-        document.getElementById('content')
-      );
+
+      helloWorldComponent;
     },
 
     libraries: function () {
